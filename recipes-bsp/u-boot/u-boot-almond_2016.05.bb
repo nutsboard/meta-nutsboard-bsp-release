@@ -3,23 +3,21 @@ require u-boot-ti.inc
 # u-boot needs devtree compiler to parse dts files
 DEPENDS += "dtc-native"
 
-DESCRIPTION = "u-boot bootloader for TI devices"
+DESCRIPTION = "u-boot bootloader for NutsBoard Almond"
 
-LIC_FILES_CHKSUM = "file://Licenses/README;md5=0507cd7da8e7ad6d6701926ec9b84c95"
+LIC_FILES_CHKSUM = "file://Licenses/README;md5=a2c678cfd4a4d97135585cad908541c6"
 
 PR = "r25"
 PV_append = "+git${SRCPV}"
 
-SRC_URI = "git://git.ti.com/ti-u-boot/ti-u-boot.git;protocol=git;branch=${BRANCH}"
+SRC_URI = "git://github.com/nutsboard/u-boot-am335x.git;protocol=git;branch=${BRANCH}"
 
-BRANCH ?= "ti-u-boot-2015.07"
+BRANCH ?= "nutsboard-v2016.05"
 
-SRCREV = "46c915c96358c426bb1f4dd1e25a9a805d93a24e"
+SRCREV = "b56d5872bdb3aa13fea38e7b55723ac03ebc9155"
 
 # Support for secure devices - detailed info is in doc/README.ti-secure
 TI_SECURE_DEV_PKG ?= ""
-TI_SECURE_DEV_PKG_dra7xx-hs-evm = "${TI_SECURE_DEV_PKG_DRA7}"
-TI_SECURE_DEV_PKG_am437x-hs-evm = "${TI_SECURE_DEV_PKG_AM4}"
 export TI_SECURE_DEV_PKG
 
 SPL_BINARY = "MLO"
