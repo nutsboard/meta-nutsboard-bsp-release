@@ -53,7 +53,7 @@ S = "${WORKDIR}/git"
 
 BRANCH = "nutsboard_ti_4.4.32_1.0.0_ga"
 
-SRCREV = "4bd604c2163a8b8ebee4697081dd170de97f84dc"
+SRCREV = "87d7abcd67723c40058a7e422afdc21f235e224f"
 PV = "4.4.32"
 
 # Append to the MACHINE_KERNEL_PR so that a new SRCREV will cause a rebuild
